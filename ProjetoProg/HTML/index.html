@@ -2,24 +2,24 @@
 <html>
     <meta charset="utf-8">
     <meta lang="PT-br">
-    <link rel="stylesheet" href="/Projetos/ProjetoProg/CSS/Prog.css">
+    <link rel="stylesheet" href="Prog.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="JS.js"></script>
     <title>EdReviews</title>
+    <element></element>
     
     <head>
         <header>
             <div class="header">
-                <img src="D:/Projetos/ProjetoProg/Imagens/Logo.png">
+                <img src="Logo.png">
                 <div class="topnav">
                     <a class="active" href="index.html">HOME</a>
                     <div class="topnav-right">
                         <a href="Sobre.html">SOBRE</a>
                     </div>
                     <div class="dropdown">
-                        <button class="dropbtn">REVIEWS
-                          <i class="fa fa-caret-down"></i>
-                        </button>
+                        <button class="dropbtn">REVIEWS</button>
                         <div class="dropdown-content">
                           <a href="ReviewFH4.html">Forza Horizon 4</a>
                         </div>
@@ -28,7 +28,11 @@
         </header>
     </head>
 
-    <body>
+    <div id="darkmode">
+        <button id="DarkMode" onclick="myFunction()">Ativar e Desativar Modo Escuro</button>
+    </div>
+
+    <body onload="currentSlide(1)">
         <h1>
             Bem Vindo ao Ed Reviews, Aqui você encontra os reviews dos últimos jogos jogados pelo Ed.
         </h1>
@@ -37,7 +41,7 @@
                 Veja o Review
             </h2>
 
-<a href="ReviewFH4.html"><img src="D:/Projetos/ProjetoProg/Imagens/cover.jpg" alt="cover" class="center"> </a>
+<a href="ReviewFH4.html"><img src="cover.jpg" alt="cover" class="center"> </a>
     <h2 style="font-size: small;">Forza Horizon 4</h2>
      
     <h3 style="margin-top: 30px;">NOTA</h3>
@@ -51,17 +55,28 @@
             Próximos Reviews
         </p>
 
-        <img src="d:/Projetos/ProjetoProg/Imagens/NeedforSpeed.jpg" width="15%" height="auto" class="centerimg">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 2</div>
+              <img src="NeedforSpeed.jpg" alt="Need For Speed Heat cover" class="center" style="width:auto; height: 300px;">
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 2</div>
+              <img src="borderlands3cover.jpg" alt="Borderlands 3 cover" class="center" style="width:auto; height: 300px;">
+            </div>
 
-        <img src="D:/Projetos/ProjetoProg/Imagens/borderlands3cover.jpg" width="15%" height="auto" class="centerimg">
+          <div style="text-align:center; margin-top: 10px;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+          </div>
+        </div>
 
-        <footer>
-            <header>
+            <header id="footer">
                 <div class="header">
-                    <img src="D:/Projetos/ProjetoProg/Imagens/Logo.png"> 
+                    <img src="Logo.png"> 
+                    <p>Todos os direitos reservados &copy; 2020</p>
                 </div>
             </header>
-        <p>Todos os direitos reservados &copy; 2020</p></footer>
-
     </body>
     </html>
